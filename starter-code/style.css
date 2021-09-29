@@ -66,7 +66,23 @@ main{
     padding-bottom: 14px;
     padding-left: 32px;
     color: white;
-  }
+
+    font-family: "Chivo";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+}
+.form input::placeholder{
+    font-family: Chivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
   
 .form input:focus {
     outline: none;
@@ -124,22 +140,47 @@ main{
    RESPONSIVE DESIGN 
    ------------------*/
 
-   @media screen and (max-height: 850px) {
+@media screen and (min-width: 1600px) {
+    .container h1{
+        font-size: 80px;
+        font-family: Chivo;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 62px;   
+        text-transform: uppercase;
+    }
+    .container{
+        height: auto;
+    }
+    main{
+        background-size: contain;
+    }
+}
+@media screen and (max-height: 850px) {
        .dots{
           display: none; 
        }
-   }
-  @media screen and (max-width: 1273px) {
+}
+@media screen and (max-width: 1273px) {
     .form {
         width: 80%;  
     }
-  }
-  @media screen and (max-width: 1065px) {
+    .container p{
+        width: 80%;
+    }
+    .logos{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1065px) {
     .form {
         width: 95%;  
     }
-  }
-  @media screen and (max-width: 1020px){
+    .container p{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 1020px){
       .container h1{
           font-size: 38px;
           line-height: 52px;
@@ -160,6 +201,12 @@ main{
     .container{
         width: 80%;
     }
+    .container p{
+        width: 65%;
+    }
+    .container .form{
+        width: 65%;
+    }
     .logo{
         padding-top: 50px;
     }
@@ -171,7 +218,28 @@ main{
         left: 4%;
     }
   }
+  @media screen and (max-width: 721px) {
+    .container p{
+        width: 80%;
+    }
+    .container .form{
+        width: 80%;
+    }
+  }
+  @media screen and (max-width: 592px) {
+    .container p{
+        width: 95%;
+    }
+    .container .form{
+        width: 100%;
+    }
+  }
   /* MOBILE */
+  @media screen and (max-height: 654px) {
+      body{
+          height: auto;
+      }
+  }
   @media screen and (max-width: 525px) {
     body{ 
         display: block;
@@ -194,6 +262,9 @@ main{
         width: 134.85px;
         margin-bottom: 10px;
         padding-bottom: 0;
+    }
+    .logos{
+        width: 100%;
     }
     main{
         background-image: none;
@@ -225,7 +296,7 @@ main{
         order: 2;
     }
 
-    .form{
+    .container .form{
         flex-direction: column;
         background: none;
         order: 4;
