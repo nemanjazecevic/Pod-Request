@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:  #121725;
+    font-family: Chivo;
+    height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+}
+main{
+    background-image: url(./assets/desktop/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position: right top 30px;
+    margin-left: 165px;
+}
+.container{
+    width: 50%;
+    background: #121725;
+}
+.container h1{
+    font-family: Chivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 52px;
+    line-height: 62px;   
+    text-transform: uppercase;
+    
+    color: #54E6AF;
+}
+.container span{
+    color: white;
+}
+.container p{
+    font-family: Chivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #C2CBE5;
+    width: 65%;
+}
+.logo{
+    padding-bottom: 100px;
+}
+.form {
+    display:flex;
+    flex-direction:row;
+    border:0;
+    padding:2px;
+    background: #2C344B;
+    border-radius: 28px;
+    overflow: hidden;
+    width: 65%;
+    justify-content: space-between;
+    
+  }
+  
+.form input {
+    border:none;
+    background: #2C344B;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 32px;
+    color: white;
+
+    font-family: "Chivo";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+}
+.form input::placeholder{
+    font-family: Chivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+  
+.form input:focus {
+    outline: none;
+}
+.form button:hover {
+    background: #B3FFE2;
+    cursor: pointer;
+}
+  
+.form button {
+    background: #54E6AF;
+    box-shadow: 0px 2px 4px rgba(84, 230, 175, 0.14);
+    border-radius: 28px;
+    border: 0;
+    font-family: Chivo;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    color: #121725;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding: 9px 27px;
+  }
+  .logos{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 90px;
+  }
+  .dots{
+      position: absolute;
+      bottom: 65px;
+  }
+.wrong .message{
+    display: block;
+    
+}
+.message{
+    font-family: Chivo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;  
+    color: #FB3E3E;
+    margin-top: 5px;
+    margin-left: 25px;
+    display: none;
+}
+
+  
+
+  /*-----------------
+   RESPONSIVE DESIGN 
+   ------------------*/
+
+@media screen and (min-width: 1600px) {
+    .container h1{
+        font-size: 80px;
+        font-family: Chivo;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 62px;   
+        text-transform: uppercase;
+    }
+    .container{
+        height: auto;
+    }
+    main{
+        background-size: contain;
+    }
+}
+@media screen and (max-height: 850px) {
+       .dots{
+          display: none; 
+       }
+}
+@media screen and (max-width: 1273px) {
+    .form {
+        width: 80%;  
+    }
+    .container p{
+        width: 80%;
+    }
+    .logos{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1065px) {
+    .form {
+        width: 95%;  
+    }
+    .container p{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 1020px){
+      .container h1{
+          font-size: 38px;
+          line-height: 52px;
+      }
+  }
+  /* TABLET */
+  @media screen and (max-width: 923px) {
+    body{
+        justify-content: right;
+        align-items: flex-start;
+    }
+    main{
+        background-image: url(./assets/tablet/image-host.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+        margin-left: 39px;
+    }
+    .container{
+        width: 80%;
+    }
+    .container p{
+        width: 65%;
+    }
+    .container .form{
+        width: 65%;
+    }
+    .logo{
+        padding-top: 50px;
+    }
+    .container h1{
+        font-size: 48px;
+    }
+    .dots{
+        bottom: 0%;
+        left: 4%;
+    }
+  }
+  @media screen and (max-width: 721px) {
+    .container p{
+        width: 80%;
+    }
+    .container .form{
+        width: 80%;
+    }
+  }
+  @media screen and (max-width: 592px) {
+    .container p{
+        width: 95%;
+    }
+    .container .form{
+        width: 100%;
+    }
+  }
+  /* MOBILE */
+  @media screen and (max-height: 654px) {
+      body{
+          height: auto;
+      }
+  }
+  @media screen and (max-width: 525px) {
+    body{ 
+        display: block;
+        background: url(./assets/mobile/image-host.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    body::before{
+        content: "";
+        background-color: #121725;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.9;
+    }
+    .logo{
+        height: 56px;
+        width: 134.85px;
+        margin-bottom: 10px;
+        padding-bottom: 0;
+    }
+    .logos{
+        width: 100%;
+    }
+    main{
+        background-image: none;
+        margin: 0;
+        background-position: top;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        
+    }
+    .container{
+        background: none;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .container h1{
+        font-size: 26px;
+        text-align: center;
+        order: 1;
+        line-height: 38px;
+    }
+    .container p{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        order: 2;
+    }
+
+    .container .form{
+        flex-direction: column;
+        background: none;
+        order: 4;
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .form input{
+        background: #2C344B;
+        border-radius: 28px;
+        margin-bottom: 11px;
+    }
+    
+    .form button{
+        margin-right: 0;
+    }
+    .label{
+        order: 5;
+    }
+    .logos {
+        order: 3;
+        margin: 50px 0;
+    }
+    .logos .spotify{
+        height: 17px;
+        width: 56px;
+    }
+    .logos .apple{
+        height: 17px;
+        width: 45px;
+    }
+    .logos .google{
+        height: 11px;
+        width: 73px;
+    }
+    .logos .pocket{
+        height: 15px;
+        width: 77px;
+    }
+    
+    .dots{
+          display: none;
+    }
+  }
